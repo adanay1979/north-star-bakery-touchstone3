@@ -180,3 +180,32 @@ footer {
     margin: 0 auto;
   }
 }
+/* Touchstone 4 interactive features */
+
+.favorite-button {
+  margin-top: 1rem;
+  padding: 0.65rem 1rem;
+  border: 2px solid var(--brown);
+  border-radius: 6px;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.favorite-button:hover,
+.favorite-button:focus {
+  background: var(--peach);
+}
+
+.favorite-button[aria-pressed="true"] {
+  background: var(--brown);
+  color: var(--cream);
+}
+
+.error-message {
+  display: block;
+  margin-top: 0.25rem;
+  color: #8B0000;
+  font-weight: bold;
+}
