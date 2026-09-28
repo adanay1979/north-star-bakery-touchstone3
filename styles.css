@@ -1,0 +1,182 @@
+/* North Star Bakery - Touchstone 3
+   Mobile-first responsive visual design */
+
+:root {
+  --cream: #FFF8F0;
+  --brown: #6B3E26;
+  --peach: #D88C5A;
+  --charcoal: #2F2A26;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img, picture, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+audio { width: 100%; }
+
+header {
+  background: var(--brown);
+  color: var(--cream);
+  padding: 1.25rem 1rem 0;
+  text-align: center;
+}
+
+.logo {
+  width: 110px;
+  margin: 0 auto .75rem;
+}
+
+h1, h2, h3, legend {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+h1 { margin: .25rem 0 1rem; font-size: 2rem; }
+h2 { color: var(--brown); margin-top: 0; font-size: 1.55rem; }
+h3 { color: var(--brown); }
+
+nav { margin: 0 -1rem; background: var(--charcoal); }
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: .4rem;
+  gap: .25rem;
+}
+
+nav a {
+  display: block;
+  padding: .7rem .9rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: .35rem;
+}
+
+nav a:hover, nav a:focus, nav a[aria-current="page"] {
+  background: var(--peach);
+  color: var(--charcoal);
+  outline: none;
+}
+
+main {
+  width: min(92%, var(--max-width));
+  margin: 1.5rem auto;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+section, .card {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: .65rem;
+  border-top: .3rem solid var(--peach);
+  box-shadow: 0 .15rem .55rem rgba(47, 42, 38, .10);
+}
+
+figure { margin: 0; }
+figcaption { margin-top: .5rem; font-style: italic; }
+
+.product-list { padding-left: 1.25rem; }
+
+form { display: flex; flex-direction: column; gap: 1rem; }
+
+fieldset {
+  border: 2px solid var(--peach);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+legend {
+  color: var(--brown);
+  font-weight: 700;
+  padding: 0 .35rem;
+}
+
+label { display: block; margin-top: .75rem; font-weight: 700; }
+
+input:not([type="radio"]), textarea {
+  width: 100%;
+  padding: .7rem;
+  border: 1px solid #8c817a;
+  border-radius: .35rem;
+  font: inherit;
+  background: #fff;
+  color: var(--charcoal);
+}
+
+input[type="radio"] { margin-right: .3rem; }
+.radio-label { display: inline; margin-right: 1rem; font-weight: 400; }
+
+button {
+  align-self: flex-start;
+  border: 0;
+  border-radius: .4rem;
+  background: var(--brown);
+  color: var(--cream);
+  padding: .8rem 1.15rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover, button:focus { background: var(--peach); color: var(--charcoal); }
+
+footer {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--charcoal);
+  color: var(--cream);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header { padding-top: 1.5rem; }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+  }
+
+  .layout {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .layout > section,
+  .layout > .card {
+    flex: 1 1 calc(50% - 1.25rem);
+  }
+
+  .full-width { flex-basis: 100% !important; }
+
+  h1 { font-size: 2.45rem; }
+  h2 { font-size: 1.75rem; }
+
+  form {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}

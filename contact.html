@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Star Bakery | Contact and Pre-Orders</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<img class="logo" src="bakery-logo_c.png" alt="North Star Bakery logo">
+<h1>Contact and Pre-Order Requests</h1>
+<nav aria-label="Primary navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div class="layout">
+<section class="full-width" aria-labelledby="contact-heading">
+<h2 id="contact-heading">Send Us a Request</h2>
+<p>Use this form to ask a general question or request a bakery pre-order. We will use the information you provide to follow up about availability and pickup details.</p>
+<form action="#" method="post">
+<fieldset>
+<legend>Your Contact Information</legend>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required autocomplete="email">
+<label for="pickup-date">Preferred pickup date:</label>
+<input type="date" id="pickup-date" name="pickup-date" required>
+</fieldset>
+<fieldset>
+<legend>Request Details</legend>
+<p>Request type:</p>
+<input type="radio" id="preorder" name="request-type" value="pre-order" required>
+<label class="radio-label" for="preorder">Pre-order</label>
+<input type="radio" id="question" name="request-type" value="general-question">
+<label class="radio-label" for="question">General question</label>
+<label for="item-details">Item details:</label>
+<textarea id="item-details" name="item-details" rows="5" required minlength="10" placeholder="Tell us what you would like to order or ask about."></textarea>
+<label for="allergy-notes">Allergy notes, if applicable:</label>
+<textarea id="allergy-notes" name="allergy-notes" rows="4" placeholder="List any allergy concerns or write none."></textarea>
+</fieldset>
+<button type="submit">Submit Request</button>
+</form>
+</section>
+<section class="full-width" aria-labelledby="location-heading">
+<h2 id="location-heading">Location and Hours</h2>
+<p>North Star Bakery serves our local neighborhood and surrounding community.</p>
+<p>Monday-Saturday: 7:00 a.m.-6:00 p.m.<br>Sunday: 8:00 a.m.-2:00 p.m.</p>
+</section>
+</div>
+</main>
+<footer><p>&copy; 2026 North Star Bakery. Handmade for our community.</p></footer>
+</body>
+</html>
