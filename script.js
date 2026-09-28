@@ -102,6 +102,7 @@ function clearError(field) {
 }
 
 function validateForm(event) {
+ event.preventDefault();
   const form = event.currentTarget;
   const nameField = form.querySelector("#name");
   const emailField = form.querySelector("#email");
