@@ -24,13 +24,14 @@
 <section class="full-width" aria-labelledby="contact-heading">
 <h2 id="contact-heading">Send Us a Request</h2>
 <p>Use this form to ask a general question or request a bakery pre-order. We will use the information you provide to follow up about availability and pickup details.</p>
-<form action="#" method="post">
-<fieldset>
+<form id="preorder-form" action="#" method="post" novalidate><fieldset>
 <legend>Your Contact Information</legend>
 <label for="name">Name:</label>
 <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+  <span id="name-error" class="error-message" aria-live="polite"></span>
 <label for="email">Email:</label>
 <input type="email" id="email" name="email" required autocomplete="email">
+  <span id="email-error" class="error-message" aria-live="polite"></span>
 <label for="pickup-date">Preferred pickup date:</label>
 <input type="date" id="pickup-date" name="pickup-date" required>
 </fieldset>
@@ -57,5 +58,5 @@
 </div>
 </main>
 <footer><p>&copy; 2026 North Star Bakery. Handmade for our community.</p></footer>
-</body>
+<script src="script.js"></script></body>
 </html>
