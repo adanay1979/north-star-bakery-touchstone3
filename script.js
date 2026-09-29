@@ -133,7 +133,10 @@ function validateForm(event) {
     storageKeys.customerName,
     nameField.value.trim()
   );
-}
+event.preventDefault();
+alert("Thank you! Your request has been submitted successfully.");
+event.target.reset();
+restoreCustomerName();}
 
 function restoreCustomerName() {
   const nameField = document.querySelector("#name");
